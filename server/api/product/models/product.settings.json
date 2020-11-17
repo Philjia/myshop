@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "normal_price": {
+      "type": "decimal"
+    },
+    "sell_price": {
+      "type": "decimal"
+    },
+    "brand": {
+      "model": "brand",
+      "via": "products"
+    },
+    "categroy": {
+      "model": "categroy",
+      "via": "products"
+    }
+  }
+}
